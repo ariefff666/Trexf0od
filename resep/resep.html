@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ayam Bakar Madu</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&family=Inter&family=Roboto:wght@300&family=Signika+Negative&display=swap" rel="stylesheet" />
+    <style>
+      html,
+      body {
+        background-color: #846249;
+        scroll-behavior: smooth;
+        font-family: "Amaranth", sans-serif;
+        max-width: max-content;
+      }
+
+      .atas {
+        margin-top: 9px;
+      }
+
+      .navbar {
+        max-height: 65px;
+      }
+
+      .form-color {
+        background-color: #fafafa;
+      }
+
+      .form-control {
+        height: 48px;
+        border-radius: 25px;
+      }
+
+      .form-control:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #35b69f;
+        outline: 0;
+        box-shadow: none;
+        text-indent: 10px;
+      }
+
+      .c-badge {
+        background-color: #35b69f;
+        color: white;
+        height: 20px;
+        font-size: 13px;
+        width: 92px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2px;
+        margin-left: 7px;
+      }
+
+      .comment-text {
+        font-size: 18px;
+      }
+
+      .wish {
+        color: #35b69f;
+      }
+
+      .user-feed {
+        font-size: 14px;
+        margin-top: 12px;
+      }
+
+      @media screen and (max-width: 991px) {
+        .kolom {
+          width: 500px;
+        }
+      }
+
+      .vl {
+        border-left: 2px solid black;
+        height: 100%;
+        position: sticky;
+      }
+
+      .bawah {
+        background-color: #31261b;
+      }
+
+      .navbar-nav {
+        background-color: #31261b;
+      }
+
+      @media screen and (min-width: 991px) {
+        .prosedur {
+          margin-left: 70px;
+        }
+      }
+
+      @media screen and (max-width: 991) {
+        .bawah {
+          max-height: 500px;
+        }
+      }
+    </style>
+  </head>
+  <body id="body">
+    <!-- NAVBAR -->
+    <section id="navbar">
+      <nav class="navbar navbar-expand-lg fixed-top justify-content-center shadow" style="background-color: #31261b">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#home" style="color: #ffc925"><strong>TrexF0od</strong></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            style="color: #ffc925; background-color: #ffc925"
+          >
+            <span class="navbar-toggler-icon" style="color: #ffc925; font-size: medium"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" style="background-color: #31261b">
+            <ul class="bawah navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: flex; flex-direction: row; justify-content: center; color: #ffc925">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#FFC925" class="bi bi-person-circle pe-2" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                  </svg>
+                  <p style="margin-top: 9px">Account</p>
+                  <!-- <ion-icon name="person-circle-outline" class="icon-navbar" style="margin-top: 20px"></ion-icon>
+                  akun -->
+                </a>
+                <ul class="dropdown-menu" style="background-color: #31261b">
+                  <li>
+                    <a class="dropdown-item" href="#" style="display: flex; flex-direction: row; justify-content: center; color: #ffc925">
+                      Tambahkan akun
+                      <ion-icon name="add-outline"></ion-icon>
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <div style="display: flex; justify-content: center">
+                    <li><a class="dropdown-item" href="#" style="color: #ffc925">Sign up</a></li>
+                    <li><a class="dropdown-item" href="#" style="color: #ffc925">Log in</a></li>
+                  </div>
+                </ul>
+              </li>
+              <li class="atas nav-link active ms-2" aria-current="page" href="#" style="color: #ffc925; margin-left: 50%">Home</li>
+              <li class="atas nav-link ms-2" href="" style="color: #ffc925">Resep</li>
+              <li class="atas nav-link ms-2" href="" style="color: #ffc925">Discussion</li>
+              <li class="atas nav-link ms-2" href="" style="color: #ffc925">Artikel</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- CONTENT -->
+    <section id="content">
+      <h1 class="text-center" style="color: #6c2e00; padding: 5rem 0 0 0"><strong>Ayam Bakar Madu</strong></h1>
+    </section>
+    <section>
+      <div class="kontainer" style="width: 90%; margin: auto">
+        <div class="row justify-content-center fs-5" style="margin-bottom: 5rem; background-color: #feddb4; border-radius: 50px; width: 100%; margin: auto">
+          <div class="col-md-6" style="border-right: black">
+            <div class="text-center">
+              <img src="../img/ayam bakar.jpg" alt="Ayam Bakar" style="padding: 3rem 0 3rem 0; width: 60%" />
+            </div>
+            <div class="card" style="background-color: #cba87e; margin: 0 2rem 3rem 2rem; border-radius: 50px">
+              <div>
+                <p style="margin: 20px 0 10px 20px; color: #31261b"><strong>A. Apa Itu Ayam Bakar</strong></p>
+                <p style="margin: 0 25px 0 40px; text-indent: 35px; text-align: justify; color: #6c2e00">
+                  Ayam bakar adalah sebuah hidangan Asia Tenggara Maritim, terutama hidangan Indonesia atau Malaysia, dari ayam yang dipanggang di atas arang
+                </p>
+              </div>
+              <div>
+                <p style="margin: 20px 0 10px 20px; color: #31261b"><strong>B. Kandungan Gizi Pada Ayam</strong></p>
+                <div class="container">
+                  <div class="row item-align-around" style="margin-left: 10px; color: #6c2e00">
+                    <div class="kolom col-md-6">
+                      <ul>
+                        <li>Riboflavin</li>
+                        <li>Kalori</li>
+                        <li>Air</li>
+                        <li>Fosfor</li>
+                        <li>Energi</li>
+                        <li>Tembaga</li>
+                        <li>Protein</li>
+                        <li>Zat Besi</li>
+                        <li>Lemak</li>
+                        <li>Kalsium</li>
+                        <li>Zinc</li>
+                        <li>Niacin</li>
+                      </ul>
+                    </div>
+                    <div class="kolom col-md-6">
+                      <ul>
+                        <li>Vitamin A</li>
+                        <li>Vitamin B12</li>
+                        <li>Vitamin B1</li>
+                        <li>Vitamin D</li>
+                        <li>Vitamin B5</li>
+                        <li>Vitamin K</li>
+                        <li>Vitamin C</li>
+                        <li>Magnesium</li>
+                        <li>Natrium</li>
+                        <li>Folat</li>
+                        <li>Kalium</li>
+                        <li>Kalsium</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p style="margin: 20px 0 10px 20px; color: #31261b"><strong>C. Notes</strong></p>
+                <p style="margin: 0 25px 40px 40px; text-indent: 35px; text-align: justify; color: #6c2e00">
+                  Kenikmatan ayam bakar madu memang dapat memanjakan lidah karena rasanya yang luar biasa. Salah satu dari sekian banyak olahan ayam ini sangat spesial, karena olesan madu akan membuat ayam bertekstur empuk dan lebih meresap
+                  hingga ke bagian dalam daging ayamnya. Ditambah aroma yang dihadirkan dari ayam bakar madu ini mampu menggugah selera. Sebelum disajikan, tambahkan perasan jeruk nipis agar lebih sedap.
+                </p>
+              </div>
+            </div>
+            <div class="card" style="background-color: #cba87e; margin: 0 2rem 3rem 2rem; border-radius: 50px">
+              <p class="text-center mt-3" style="color: #31261b"><strong>Alat dan Bahan Pembuatan Ayam Bakar</strong></p>
+              <div class="container">
+                <div class="row item-align-around" style="color: #6c2e00">
+                  <div class="kolom col-md-6">
+                    <p class="text-center"><strong>Alat</strong></p>
+                    <ul style="margin-left: 20px">
+                      <li>Riboflavin</li>
+                      <li>Kalori</li>
+                      <li>Air</li>
+                      <li>Fosfor</li>
+                      <li>Energi</li>
+                      <li>Tembaga</li>
+                      <li>Protein</li>
+                      <li>Zat Besi</li>
+                      <li>Lemak</li>
+                      <li>Kalsium</li>
+                      <li>Zinc</li>
+                      <li>Niacin</li>
+                    </ul>
+                  </div>
+                  <div class="kolom col-md-6">
+                    <p class="text-center" style="margin-left: 0"><strong>Bahan</strong></p>
+                    <ul style="margin-right: 10px; margin-left: 20px">
+                      <li>Vitamin A</li>
+                      <li>Vitamin B12</li>
+                      <li>Vitamin B1</li>
+                      <li>Vitamin D</li>
+                      <li>Vitamin B5</li>
+                      <li>Vitamin K</li>
+                      <li>Vitamin C</li>
+                      <li>Magnesium</li>
+                      <li>Natrium</li>
+                      <li>Folat</li>
+                      <li>Kalium</li>
+                      <li>Kalsium</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="text-center pt-4 prosedur" style="font-size: 25px; color: #31261b"><strong>Prosedur Membuat Ayam Bakar Madu</strong></div>
+            <div class="prosedur">
+              <ol class="" style="color: #6c2e00; margin: 20px 10px 200px 10px">
+                <li class="mb-2">Potong ayam menjadi 12 bagian lalu cuci sampai bersih dan disisihkan.</li>
+                <video class="justify-content-center vidio" width="80%" height="100%" style="margin-left: 5%; margin-bottom: 20px" muted loop autoplay="autoplay">
+                  <source src="/video/4detik.webm" type="video/webm" />
+                </video>
+                <li class="mb-2">Tumis bumbu halus sampai wangi.</li>
+                <video class="justify-content-center vidio" width="80%" height="100%" style="margin-left: 5%; margin-bottom: 20px" muted loop autoplay="autoplay">
+                  <source src="/video/4detik.webm" type="video/webm" />
+                </video>
+                <li class="mb-2">Tambahkan lengkuas, jahe, daun salam, dan serai. Tumis hingga matang.</li>
+                <video class="justify-content-center vidio" width="80%" height="100%" style="margin-left: 5%; margin-bottom: 20px" muted loop autoplay="autoplay">
+                  <source src="/video/4detik.webm" type="video/webm" />
+                </video>
+                <li class="mb-2">Masukkan ayam, aduk hingga bumbu merata masak hingga ayam berubah warna.</li>
+                <video class="justify-content-center vidio" width="80%" height="100%" style="margin-left: 5%; margin-bottom: 20px" muted loop autoplay="autoplay">
+                  <source src="/video/4detik.webm" type="video/webm" />
+                </video>
+                <li class="mb-2">Tambahkan air asam jawa, gula jawa, madu, garam, dan air. Masak hingga ayam matang dan air meresap. Angkat.</li>
+                <video class="justify-content-center vidio" width="80%" height="100%" style="margin-left: 5%; margin-bottom: 20px" muted loop autoplay="autoplay">
+                  <source src="/video/4detik.webm" type="video/webm" />
+                </video>
+                <li class="mb-2">Bakar ayam diatas bara api atau menggunakan wajan datar anti lengket, hingga berwarna kecoklatan. Sesekali olesi ayam dengan bumbu olesan. Angkat.</li>
+                <video class="justify-content-center vidio" width="80%" height="100%" style="margin-left: 5%; margin-bottom: 20px" muted loop autoplay="autoplay">
+                  <source src="/video/4detik.webm" type="video/webm" />
+                </video>
+                <li class="mb-2">Siap disajikan.</li>
+                <video class="justify-content-center vidio" width="80%" height="100%" style="margin-left: 5%; margin-bottom: 20px" muted loop autoplay="autoplay">
+                  <source src="/video/4detik.webm" type="video/webm" />
+                </video>
+                <li>
+                  TIPS
+                  <ol>
+                    <li>Gunakan ayam kampung untuk hasil sajian yang lebih gurih.</li>
+                    <li>Sesaat sebelum disajikan, kucuri ayam dengan air perasan jeruk nipis agar lebih sedap.</li>
+                  </ol>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KOMENTAR -->
+    <section id="comment">
+      <div class="container mt-5 mb-5">
+        <div class="row height d-flex justify-content-center align-items-center">
+          <div class="col-md-7">
+            <div class="card" style="background-color: #ffd199; border-radius: 40px; border: black solid">
+              <div class="pt-3 ps-4 pb-2" style="background-color: #e2ac84; border-radius: 35px 35px 0 0; border: black solid">
+                <h6>Comments</h6>
+              </div>
+              <div class="mt-2" style="background-color: #ffd199">
+                <div class="d-flex flex-row p-3">
+                  <div class="w-100">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="d-flex flex-row align-items-center">
+                        <span class="me-2"><strong>Farhan</strong></span> <small class="c-badge">Top Comment</small>
+                      </div>
+                      <small>12h ago</small>
+                    </div>
+                    <p class="text-justify comment-text mb-0">Komentar ini dibuat di jam 02:46</p>
+                    <div class="d-flex flex-row user-feed">
+                      <span class="wish"><i class="fa fa-heartbeat mr-2"></i>24</span> <span class="ms-3"><i class="fa fa-comments-o me-2"></i>Reply</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex flex-row p-3">
+                  <div class="w-100">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="d-flex flex-row align-items-center">
+                        <span class="me-2"><strong>Rihal</strong></span> <small class="c-badge">Top Comment</small>
+                      </div>
+                      <small>2h ago</small>
+                    </div>
+                    <p class="text-justify comment-text mb-0">Ayam Madu, gokil bro, kapan lagi</p>
+                    <div class="d-flex flex-row user-feed">
+                      <span class="wish"><i class="fa fa-heartbeat mr-2"></i>14</span> <span class="ms-3"><i class="fa fa-comments-o me-2"></i>Reply</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-3 d-flex flex-row align-items-center p-3 form-color" style="border-radius: 0 0 35px 35px; background-color: #e2ac84; border: black solid">
+                <input type="text" class="form-control" placeholder="Click Here to add your comment..." style="background-color: #e2ac84; border-color: black" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script></script>
+  </body>
+</html>
